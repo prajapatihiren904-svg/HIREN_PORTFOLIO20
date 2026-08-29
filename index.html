@@ -122,26 +122,33 @@ button { cursor: pointer; }
 .portrait-inner { width: 100%; height: 100%; border-radius: 18px; overflow: hidden; position: relative; background-color: #0b0f17; }
 .portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .portrait-badge { position: absolute; bottom: 16px; left: 16px; right: 16px; background: rgba(13, 17, 26, 0.85); backdrop-filter: blur(12px); border: 1px solid var(--border-glow); border-radius: 14px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.75rem; }
-.portrait-badge-icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(0, 242, 254, 0.15); display: flex; align-items: center; justify-content: center; color: #00f2fe; }
-.portrait-badge-text h4 { font-size: 0.85rem; font-weight: 700; }
-.portrait-badge-text p { font-size: 0.75rem; color: #94a3b8; }
-.orbit-ring { position: absolute; width: 420px; height: 420px; border: 1.5px dashed rgba(0, 242, 254, 0.3); border-radius: 50%; pointer-events: none; animation: spin-orbit 30s linear infinite; }
-@keyframes spin-orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    .orbit-ring-2 { position: absolute; width: 480px; height: 480px; border: 1px dashed rgba(139, 92, 246, 0.25); border-radius: 50%; pointer-events: none; animation: spin-orbit-reverse 45s linear infinite; }
-@keyframes spin-orbit-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
-
-.glow-circle { position: absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(0,242,254,0.4) 0%, rgba(139,92,246,0.25) 45%, transparent 70%); filter: blur(45px); z-index: -1; animation: pulseGlow 4s ease-in-out infinite; }
-@keyframes pulseGlow { 0%, 100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.15); opacity: 1; } }
-
-.hero-portrait-wrapper { animation: floatPortrait 5s ease-in-out infinite; }
+.portrait-badge-icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(0, 242, 254, 0.15); disp.hero-portrait-wrapper { position: relative; display: flex; align-items: center; justify-content: center; animation: floatPortrait 5s ease-in-out infinite; }
 @keyframes floatPortrait { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+.orbit-ring, .orbit-ring-2 { position: absolute; top: 50%; left: 50%; border-radius: 50%; pointer-events: none; }
+
+.orbit-ring { width: 420px; height: 420px; border: 1.5px dashed rgba(0, 242, 254, 0.35); animation: spin-orbit 30s linear infinite; }
+@keyframes spin-orbit { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
+.orbit-ring::before { content: ''; position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; margin-left: -4px; background: #00f2fe; border-radius: 50%; box-shadow: 0 0 12px 3px rgba(0, 242, 254, 0.9); }
+
+.orbit-ring-2 { width: 490px; height: 490px; border: 1px dashed rgba(139, 92, 246, 0.28); animation: spin-orbit-reverse 45s linear infinite; }
+@keyframes spin-orbit-reverse { from { transform: translate(-50%, -50%) rotate(360deg); } to { transform: translate(-50%, -50%) rotate(0deg); } }
+.orbit-ring-2::before { content: ''; position: absolute; bottom: -3px; left: 50%; width: 6px; height: 6px; margin-left: -3px; background: #8b5cf6; border-radius: 50%; box-shadow: 0 0 12px 3px rgba(139, 92, 246, 0.9); }
+
+.glow-circle { position: absolute; top: 50%; left: 50%; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(0,242,254,0.4) 0%, rgba(139,92,246,0.25) 45%, transparent 70%); filter: blur(45px); z-index: -1; animation: pulseGlow 4s ease-in-out infinite; }
+@keyframes pulseGlow { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; } 50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; } }
 
 .portrait-card { animation: cardGlowPulse 4s ease-in-out infinite; transition: transform 0.4s ease; }
 @keyframes cardGlowPulse { 0%, 100% { box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 25px rgba(0,242,254,0.25); } 50% { box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 45px rgba(0,242,254,0.55); } }
 .portrait-card:hover { transform: translateY(-6px) scale(1.02); }
 
 .portrait-img { transition: transform 0.6s ease; }
-.portrait-card:hover .portrait-img { transform: scale(1.08); }
+.portrait-card:hover .portrait-img { transform: scale(1.08); }lay: flex; align-items: center; justify-content: center; color: #00f2fe; }
+.portrait-badge-text h4 { font-size: 0.85rem; font-weight: 700; }
+.portrait-badge-text p { font-size: 0.75rem; color: #94a3b8; }
+.orbit-ring { position: absolute; width: 420px; height: 420px; border: 1.5px dashed rgba(0, 242, 254, 0.3); border-radius: 50%; pointer-events: none; animation: spin-orbit 30s linear infinite; }
+@keyframes spin-orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
 .section { padding: 6rem 0; position: relative; z-index: 1; }
 .section-header { text-align: center; max-width: 680px; margin: 0 auto 4rem auto; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
 .section-kicker { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #00f2fe; }
