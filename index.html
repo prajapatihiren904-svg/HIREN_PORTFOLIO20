@@ -127,6 +127,21 @@ button { cursor: pointer; }
 .portrait-badge-text p { font-size: 0.75rem; color: #94a3b8; }
 .orbit-ring { position: absolute; width: 420px; height: 420px; border: 1.5px dashed rgba(0, 242, 254, 0.3); border-radius: 50%; pointer-events: none; animation: spin-orbit 30s linear infinite; }
 @keyframes spin-orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .orbit-ring-2 { position: absolute; width: 480px; height: 480px; border: 1px dashed rgba(139, 92, 246, 0.25); border-radius: 50%; pointer-events: none; animation: spin-orbit-reverse 45s linear infinite; }
+@keyframes spin-orbit-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+
+.glow-circle { position: absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(0,242,254,0.4) 0%, rgba(139,92,246,0.25) 45%, transparent 70%); filter: blur(45px); z-index: -1; animation: pulseGlow 4s ease-in-out infinite; }
+@keyframes pulseGlow { 0%, 100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.15); opacity: 1; } }
+
+.hero-portrait-wrapper { animation: floatPortrait 5s ease-in-out infinite; }
+@keyframes floatPortrait { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+.portrait-card { animation: cardGlowPulse 4s ease-in-out infinite; transition: transform 0.4s ease; }
+@keyframes cardGlowPulse { 0%, 100% { box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 25px rgba(0,242,254,0.25); } 50% { box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 45px rgba(0,242,254,0.55); } }
+.portrait-card:hover { transform: translateY(-6px) scale(1.02); }
+
+.portrait-img { transition: transform 0.6s ease; }
+.portrait-card:hover .portrait-img { transform: scale(1.08); }
 .section { padding: 6rem 0; position: relative; z-index: 1; }
 .section-header { text-align: center; max-width: 680px; margin: 0 auto 4rem auto; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
 .section-kicker { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #00f2fe; }
@@ -307,10 +322,11 @@ button { cursor: pointer; }
           </div>
 
           <!-- Hero Portrait Area -->
-          <div class="hero-portrait-wrapper">
-            <div class="orbit-ring"></div>
-            
-            <div class="portrait-card">
+         <div class="hero-portrait-wrapper">
+<div class="glow-circle"></div>
+<div class="orbit-ring"></div>
+<div class="orbit-ring-2"></div>
+<div class="portrait-card">
               <div class="portrait-inner">
                 <img id="hero-portrait-img" class="portrait-img" alt="Hiren Prajapati Professional Developer Portrait" />
                 
