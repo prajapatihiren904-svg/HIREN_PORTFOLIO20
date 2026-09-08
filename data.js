@@ -205,7 +205,7 @@ const PORTFOLIO_DATA = {
     {
       step: "01",
       title: "Python Fundamentals",
-      status: "In Progress",
+      status: "IActive Focus",
       statusBadge: "In Progress",
       description: "Data types, control structures, functions, modules, file handling, and clean code conventions."
     },
@@ -226,28 +226,28 @@ const PORTFOLIO_DATA = {
     {
       step: "04",
       title: "Databases",
-      status: "In Progress",
-      statusBadge: "In Progress",
+      status: "Completed",
+      statusBadge: "Completed",
       description: "Relational database modeling, SQL query optimization, data persistence, and Python ORMs."
     },
     {
       step: "05",
       title: "APIs",
-      status: "In Progress",
+      status: "Active Focus",
       statusBadge: "In Progress",
       description: "Building RESTful API endpoints, JSON data exchange, request validation, and API testing."
     },
     {
       step: "06",
       title: "Frontend Integration",
-      status: "In Progress",
+      status: "Active Focus",
       statusBadge: "In Progress",
       description: "Connecting backend API services with modern dynamic HTML, CSS, and JavaScript frontends."
     },
     {
       step: "07",
       title: "Full-Stack Projects",
-      status: "In Progress",
+      status: "Active Focus",
       statusBadge: "In Progress",
       description: "Deploying end-to-end Python web applications with cloud databases, AI modules, and analytics."
     }
