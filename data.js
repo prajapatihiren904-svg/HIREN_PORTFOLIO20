@@ -233,8 +233,8 @@ const PORTFOLIO_DATA = {
     {
       step: "05",
       title: "APIs",
-      status: "Upcoming",
-      statusBadge: "Next",
+      status: "In Progress",
+      statusBadge: "In Progress",
       description: "Building RESTful API endpoints, JSON data exchange, request validation, and API testing."
     },
     {
