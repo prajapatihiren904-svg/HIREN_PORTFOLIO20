@@ -205,8 +205,8 @@ const PORTFOLIO_DATA = {
     {
       step: "01",
       title: "Python Fundamentals",
-      status: "Completed",
-      statusBadge: "Completed",
+      status: "In Progress",
+      statusBadge: "In Progress",
       description: "Data types, control structures, functions, modules, file handling, and clean code conventions."
     },
     {
@@ -220,7 +220,7 @@ const PORTFOLIO_DATA = {
       step: "03",
       title: "Backend Development",
       status: "Active Focus",
-      statusBadge: "Learning",
+      statusBadge: "In Progress",
       description: "Learning server-side Python frameworks, HTTP request flows, routing, and business logic."
     },
     {
@@ -240,15 +240,15 @@ const PORTFOLIO_DATA = {
     {
       step: "06",
       title: "Frontend Integration",
-      status: "Upcoming",
-      statusBadge: "Next",
+      status: "In Progress",
+      statusBadge: "In Progress",
       description: "Connecting backend API services with modern dynamic HTML, CSS, and JavaScript frontends."
     },
     {
       step: "07",
       title: "Full-Stack Projects",
-      status: "Future Goal",
-      statusBadge: "Future",
+      status: "In Progress",
+      statusBadge: "In Progress",
       description: "Deploying end-to-end Python web applications with cloud databases, AI modules, and analytics."
     }
   ],
