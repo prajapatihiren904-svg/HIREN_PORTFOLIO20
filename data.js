@@ -58,6 +58,7 @@ const PORTFOLIO_DATA = {
       {
         semester: "Semester 2",
         status: "Completed",
+        spi: "7.63 SPI"
         badgeClass: "badge-completed",
         period: "Completed 2026",
         spi: "Completed",
